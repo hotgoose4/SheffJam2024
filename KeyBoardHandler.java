@@ -2,7 +2,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class KeyBoardHandler implements KeyListener {
-    boolean w, a, s, d;
+    boolean w, a, s, d, space;
     @Override
     public void keyTyped(KeyEvent e) {
     }
@@ -21,6 +21,12 @@ public class KeyBoardHandler implements KeyListener {
                 break;
             case KeyEvent.VK_D:
                 d = true;
+                break;
+            case KeyEvent.VK_SPACE:
+                space = !space;
+                break;
+            case KeyEvent.VK_ESCAPE:
+                System.exit(0);
                 break;
         }
 

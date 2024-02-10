@@ -11,6 +11,7 @@ public class Entity {
     double velocity;
     BufferedImage defaultImage;
     BufferedImage i;
+    int width, height;
 
     public Entity(String path, String file) {
         try{
@@ -38,7 +39,7 @@ public class Entity {
             addition = Math.PI;
         }
         direction = Math.atan(-dy/dx) + addition;
-        BufferedImage newImage = new BufferedImage(defaultImage.getHeight(), defaultImage.getHeight(), defaultImage.getType() );
+        BufferedImage newImage = new BufferedImage(defaultImage.getWidth(), defaultImage.getHeight(), defaultImage.getType() );
         Graphics2D g2d = newImage.createGraphics();
         g2d.rotate(direction, newImage.getWidth() / 2,
                   newImage.getHeight() / 2);
